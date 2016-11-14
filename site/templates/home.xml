@@ -36,7 +36,7 @@
 					</a>
 				</div>
 				<div class="form_wrap">
-					<h3><cms:text constant="form_title"/></h3>
+					<h4><cms:text constant="form_title"/></h4>
 					<cms:module
 						name="contact_form"
 						action="show"
