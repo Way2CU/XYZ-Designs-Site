@@ -1,0 +1,52 @@
+<document>
+	<cms:svg file="site-sprite.svg"/>
+	<header>
+		<a
+			class="logo"
+			href="url_Make('', 'home')"
+			cms:eval="href"
+			>
+		</a>
+
+		<nav>
+			<a
+				class="$section == 'home' ? 'active' : false"
+				href="url_Make('', 'home')"
+				cms:eval="href"
+				cms:optional="class"
+				>
+				<cms:text constant="menu_home"/>
+			</a>
+			<a
+				class="$section == 'products' ? 'active' : false"
+				href="url_Make('', 'products')"
+				cms:eval="href"
+				cms:optional="class"
+				>
+				<cms:text constant="menu_products"/>
+			</a>
+			<a
+				class="$section == 'blog' ? 'active' : false"
+				href="url_Make('', 'blog')"
+				cms:eval="href"
+				cms:optional="class"
+				>
+				<cms:text constant="menu_blog"/>
+			</a>
+			<a
+				class="contact"
+				href="javascript:void(0)"
+				>
+				<cms:text constant="menu_contact"/>
+			</a>
+		</nav>
+
+		<a
+			href="'tel:'.urlencode(Language::getText('phone'))"
+			cms:eval="href"
+			class="phone"
+			>
+			<cms:text constant="phone"/>
+		</a>
+	</header>
+</document>

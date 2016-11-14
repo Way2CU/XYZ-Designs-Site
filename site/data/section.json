@@ -1,3 +1,5 @@
 {
-	"/": "home.xml"
+	"/": "home.xml",
+	"/products": "products.xml",
+	"/blog": "blog.xml"
 }

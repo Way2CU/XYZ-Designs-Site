@@ -1,3 +1,8 @@
 {
-	"site_title": "XYZ Designs"
+	"site_title": "XYZ Designs",
+	"phone": "03-7654321",
+	"menu_home": "דף בית",
+	"menu_products": "המוצרים שלנו",
+	"menu_blog":"בלוג",
+	"menu_contact":"יצירת קשר"
 }
