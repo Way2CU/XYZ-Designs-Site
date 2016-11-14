@@ -1,0 +1,131 @@
+/**
+ * Content Style Sheet
+ * XYZ Design
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+@slider_images_ratio: 0.46875;
+
+div.slider {
+	display: block;
+	position: relative;
+	height: calc(100vw * @slider_images_ratio);
+	overflow: hidden;
+}
+
+div.slider div.controls {
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	transform: translatex(-50%);
+}
+
+div.slider div.controls a.control {
+	display: inline-block;
+	vertical-align: middle;
+	width: 1em;
+	height: 1em;
+	border: 2px solid @color_white;
+	background-color: transparent;
+	box-shadow: 0px 0px 0px 1px #33485d;
+	border-radius: 50%;
+	margin: 0em 0.5em;
+	transition: all 0.3s;
+}
+
+div.slider div.controls a.control.active {
+	background-color: @color_blue;
+}
+
+div.slider div.links {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+div.slider div.links a {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	margin: 0em 0.5em;
+	padding: 1.5em 0em;
+	color: @color_white;
+	border: 1px solid @color_white;
+	transition: all 0.3s;
+	width: 200px;
+}
+
+div.slider div.links a.contact {
+	background-color: @color_blue;
+	border-color: @color_blue;
+}
+
+div.slider div.links a.contact:hover {
+	background-color: fade(@color_blue, 50%);
+}
+
+div.slider div.links a.product:hover {
+	background-color: fade(@color_white, 50%);
+	color: @color_blue;
+}
+
+div.slider div.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	transition: all 0.8s;
+}
+
+div.slider div.slide.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+div.slider div.slide div.title {
+	position: absolute;
+	text-align: center;
+	bottom: 60%;
+	left: 50%;
+	transform: translatex(-50%);
+	width: 1000px;
+	height: 150px;
+	color: @color_white;
+	overflow: hidden;
+}
+
+div.slider div.slide div.title h3 {
+	position: relative;
+	margin-bottom: 0;
+	top: -150%;
+	font-weight: 300;
+	font-size: 3em;
+	transition: all 0.5s;
+}
+
+div.slider div.slide.visible div.title h3 {
+	top: 0;
+}
+
+div.slider div.slide div.title p {
+	position: relative;
+	bottom: -150%;
+	margin-top: 0;
+	font-size: 1.5em;
+	transition: all 0.5s;
+}
+
+div.slider div.slide.visible div.title p {
+	bottom: 0;
+}

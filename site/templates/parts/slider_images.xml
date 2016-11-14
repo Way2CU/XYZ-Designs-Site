@@ -1,0 +1,12 @@
+<document>
+	<div
+		class="slide"
+		style="'background-image: url('.$params['image'].');'"
+		cms:eval="style"
+		>
+		<div class="title">
+			<h3><cms:var param="title" multilanguage="yes"/></h3>
+			<cms:markdown param="description" multilanguage="yes"/>
+		</div>
+	</div>
+</document>

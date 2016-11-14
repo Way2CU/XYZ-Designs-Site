@@ -3,31 +3,31 @@
 	<header>
 		<a
 			class="logo"
-			href="url_Make('', 'home')"
+			href="URL::make()"
 			cms:eval="href"
 			>
 		</a>
 
 		<nav>
 			<a
-				class="$section == 'home' ? 'active' : false"
-				href="url_Make('', 'home')"
+				class="URL::is_active('home.xml')"
+				href="URL::make()"
 				cms:eval="href"
 				cms:optional="class"
 				>
 				<cms:text constant="menu_home"/>
 			</a>
 			<a
-				class="$section == 'products' ? 'active' : false"
-				href="url_Make('', 'products')"
+				class="URL::is_active('products.xml')"
+				href="URL::make(array(), 'products.xml')"
 				cms:eval="href"
 				cms:optional="class"
 				>
 				<cms:text constant="menu_products"/>
 			</a>
 			<a
-				class="$section == 'blog' ? 'active' : false"
-				href="url_Make('', 'blog')"
+				class="URL::is_active('blog.xml')"
+				href="URL::make(array(), 'blog.xml')"
 				cms:eval="href"
 				cms:optional="class"
 				>
@@ -42,7 +42,7 @@
 		</nav>
 
 		<a
-			href="'tel:'.urlencode(Language::getText('phone'))"
+			href="'tel:'.urlencode(Language::get_Text('phone'))"
 			cms:eval="href"
 			class="phone"
 			>

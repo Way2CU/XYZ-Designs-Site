@@ -4,5 +4,8 @@
 	"menu_home": "דף בית",
 	"menu_products": "המוצרים שלנו",
 	"menu_blog":"בלוג",
-	"menu_contact":"יצירת קשר"
+	"menu_contact":"יצירת קשר",
+	"button_contact": "צרו עימנו קשר",
+	"button_products": "תיק עבודות",
+	"form_title": "רוצים שנחזור אליכם? מלאו את הטופס"
 }

@@ -51,6 +51,22 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	// create controls for home page sliders
+	var sliders = document.querySelectorAll('div.slide');
+	var controls_container = document.querySelector('div.controls');
+	for(var i = 0; i < sliders.length; i++) {
+		var control = document.createElement('a');
+		control.setAttribute('href', 'javascript:void(0)');
+		control.classList.add('control');
+		controls_container.appendChild(control);
+	}
+
+	Site.slider = new PageControl('div.slider', 'div.slide');
+	Site.slider
+		.setInterval(6000)
+		.attachControls('div.controls a')
+		.setWrapAround(true);
 };
 
 
