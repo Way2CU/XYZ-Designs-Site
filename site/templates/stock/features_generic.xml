@@ -10,7 +10,7 @@
 	The following parameters are required: sprite_icon
 -->
 <document>
-	<li class="stock feature">
+	<li class="'stock feature '.$params['text_id']" cms:eval="class">
 		<!-- Sprite image -->
 		<cms:if condition="isset($template['sprite'])">
 			<cms:svg

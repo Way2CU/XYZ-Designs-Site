@@ -45,6 +45,54 @@
 				</div>
 			</div>
 
+			<section class="center texture">
+				<cms:module
+					name="articles"
+					action="show_group"
+					text_id="services"
+					template="parts/group_article.xml"
+					/>
+				<ul id="services">
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="services"
+						template="stock/features_generic.xml"
+						>
+						<param name="sprite" value="site-sprite"/>
+						<param name="title" value=""/>
+					</cms:module>
+				</ul>
+			</section>
+
+			<section>
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about"
+					template="parts/article.xml"
+					/>
+			</section>
+
+			<section class="features center">
+				<cms:module
+					name="articles"
+					action="show_group"
+					text_id="features"
+					template="parts/group_article.xml"
+					/>
+				<ul id="features">
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="features"
+						template="stock/features_generic.xml"
+						>
+						<param name="title" value=""/>
+					</cms:module>
+				</ul>
+			</section>
+
 			<!-- Bottom part of the site -->
 			<cms:template file="parts/footer.xml"/>
 		</body>

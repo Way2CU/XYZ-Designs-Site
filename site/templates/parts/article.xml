@@ -1,0 +1,22 @@
+<document>
+	<article>
+		<div class="content">
+			<!-- article title -->
+			<h3><cms:var param="title" multilanguage="yes"/></h3>
+
+			<!-- article content -->
+			<cms:markdown param="content" multilanguage="yes"/>
+		</div>
+
+		<!-- article images -->
+		<div class="images">
+			<cms:module
+				name="gallery"
+				action="show_image_list"
+				group_id="$params['gallery']"
+				template="parts/article_images.xml"
+				cms:eval="group_id"
+				/>
+		</div>
+	</article>
+</document>

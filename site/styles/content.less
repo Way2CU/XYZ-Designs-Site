@@ -8,6 +8,13 @@
 
 @slider_images_ratio: 0.46875;
 
+.texture {
+	background-image: url(../images/texture.png);
+	background-repeat: repeat;
+	background-position: center center;
+	background-size: 150px 150px;
+}
+
 div.slider {
 	display: block;
 	position: relative;
@@ -212,4 +219,202 @@ div.slider div.form_wrap form div.controls button {
 
 div.slider div.form_wrap form div.controls button:hover {
 	background-color: lighten(@color_blue, 10%);
+}
+
+section {
+	padding: 2em calc(~'(100% - 1200px)' / 2);
+}
+
+section.center {
+	text-align: center;
+}
+
+section.features {
+	background-image: url(../images/stb.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 1920px 950px;
+	min-height: calc(~'950px - 4em');
+	position: relative;
+}
+
+section article h3,
+section > h2 {
+	margin: 0;
+	color: @color_bright_blue;
+}
+
+section > p {
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.2em;
+	width: 70%;
+}
+
+section.features > p,
+section.features > h2 {
+	color: @color_white;
+}
+
+ul#services {
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul#services li {
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+	padding: 3.5em 5em;
+	width: 30%;
+	background-color: @color_white;
+	border: 1px solid transparent;
+	transition: all 0.3s;
+	position: relative;
+}
+
+ul#services li:hover {
+	border-color: @color_bright_grey;
+}
+
+ul#services li svg {
+	display: inline-block;
+	width: 4em;
+	height: 4em;
+}
+
+ul#services li h4 {
+	margin: 0;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+ul#services li:nth-of-type(2) {
+	margin: 0em 5%;
+}
+
+section article p:first-of-type {
+	margin-top: 0;
+}
+
+section article div.content,
+section article div.images {
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	width: 50%;
+}
+
+section article div.images img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// features
+
+ul#features {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 500px;
+	width: 1200px;
+	list-style-type: none;
+}
+
+ul#features li {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	background-color: transparent;
+	border: none;
+	color: @color_white;
+	width: 445px;
+}
+
+ul#features li.right:nth-of-type(1n) {
+	right: 10px;
+	top: 120px;
+}
+
+ul#features li.right:nth-of-type(1n):before,
+ul#features li.right:nth-of-type(2n):before {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	content: "";
+	background-image: url(../images/right-top.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 481px 102px;
+	width: 481px;
+	height: 102px;
+}
+
+ul#features li.right:nth-of-type(2n) {
+	top: 220px;
+}
+
+ul#features li.right:nth-of-type(2n):before {
+	background-image: url(../images/right-botom.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 445px 65px;
+	width: 445px;
+	height: 65px;
+}
+
+ul#features li.left:nth-of-type(3n) {
+	top: 30px;
+}
+
+ul#features li.left:nth-of-type(5n):before,
+ul#features li.left:nth-of-type(4n):before,
+ul#features li.left:nth-of-type(3n):before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-image: url(../images/left-top.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 536px 156px;
+	width: 536px;
+	height: 156px;
+}
+
+ul#features li.left:nth-of-type(4n) {
+	top: 130px;
+}
+
+ul#features li.left:nth-of-type(4n):before {
+	background-image: url(../images/left-middle.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 481px 102px;
+	width: 481px;
+	height: 102px;
+}
+
+ul#features li.left:nth-of-type(5n) {
+	top: 230px;
+}
+
+ul#features li.left:nth-of-type(5n):before {
+	background-image: url(../images/left-bottom.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 445px 65px;
+	width: 445px;
+	height: 65px;
+}
+
+ul#features li h4 {
+	margin-bottom: 0.5em;
 }
