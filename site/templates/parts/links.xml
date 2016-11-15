@@ -1,0 +1,10 @@
+<document>
+	<a
+		target="_blank"
+		class="$params['text_id']"
+		href="$params['url']"
+		cms:eval="href,class"
+		>
+		<cms:markdown param="description" multilanguage="yes"/>
+	</a>
+</document>

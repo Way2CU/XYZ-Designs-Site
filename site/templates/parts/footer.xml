@@ -1,0 +1,37 @@
+<document>
+	<footer>
+		<div class="content">
+			<div class="address">
+				<cms:module
+					name="links"
+					action="show_link_list"
+					group="address"
+					template="parts/links.xml"
+					/>
+			</div>
+			<div class="social">
+				<h4><cms:text constant="social_title"/></h4>
+				<cms:module
+					name="links"
+					action="show_link_list"
+					group="social"
+					template="parts/links.xml"
+					/>
+			</div>
+			<div class="form_wrap">
+				<h4><cms:text constant="form_title"/></h4>
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="contact"
+					/>
+			</div>
+		</div>
+		<!-- copyright -->
+		<cms:template file="stock/copyright.xml">
+			<param name="holder" value="copyright_holder"/>
+			<param name="text" value="copyright_text"/>
+			<param name="light" value="1"/>
+		</cms:template>
+	</footer>
+</document>

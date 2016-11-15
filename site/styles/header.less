@@ -45,8 +45,11 @@ header nav > a {
 	transition: all 0.3s;
 }
 
-header a.phone:hover,
-header nav > a.active,
-header nav > a:hover {
+header nav > a.active {
 	background-color: @color_blue;
+}
+
+header a.phone:hover,
+header nav > a:hover {
+	background-color: lighten(@color_blue, 10%);
 }
