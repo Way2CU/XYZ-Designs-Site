@@ -56,23 +56,38 @@ div.slider div.links a {
 	padding: 1.5em 0em;
 	color: @color_white;
 	border: 1px solid @color_white;
-	transition: all 0.3s;
 	width: 200px;
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+	transition: all 0.3s;
 }
 
-div.slider div.links a.contact {
+div.slider div.links a:hover {
+	background-color: @color_white;
+}
+
+div.slider div.links a:before {
+	content: "";
+	position: absolute;
+	width: 150px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	transform: translatex(-50%) rotate(-45deg) scale(1);
 	background-color: @color_blue;
-	border-color: @color_blue;
+	z-index: -1;
+	opacity: 0;
+	transition: all 0.3s;
 }
 
-div.slider div.links a.contact:hover {
-	background-color: fade(@color_blue, 50%);
+div.slider div.links a:hover:before {
+	opacity: 1;
+	transform: translatex(-50%) rotate(-45deg) scale(2);
 }
 
-div.slider div.links a.product:hover {
-	background-color: fade(@color_white, 50%);
-	color: @color_blue;
-}
+
+
 
 div.slider div.slide {
 	position: absolute;
