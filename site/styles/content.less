@@ -56,6 +56,7 @@ div.slider div.links a {
 	padding: 1.5em 0em;
 	color: @color_white;
 	border: 1px solid @color_white;
+	background-color: fade(@color_dark_grey, 50%);
 	width: 200px;
 	position: relative;
 	z-index: 0;
@@ -85,9 +86,6 @@ div.slider div.links a:hover:before {
 	opacity: 1;
 	transform: translatex(-50%) rotate(-45deg) scale(2);
 }
-
-
-
 
 div.slider div.slide {
 	position: absolute;
@@ -124,26 +122,28 @@ div.slider div.slide div.title {
 div.slider div.slide div.title h3 {
 	position: relative;
 	margin-bottom: 0;
-	top: -150%;
+	top: 0%;
 	font-weight: 300;
 	font-size: 3em;
+	transform: translatey(-100px);
 	transition: all 0.5s;
 }
 
 div.slider div.slide.visible div.title h3 {
-	top: 0;
+	transform: translatey(0px);
 }
 
 div.slider div.slide div.title p {
 	position: relative;
-	bottom: -150%;
+	bottom: 0%;
 	margin-top: 0;
 	font-size: 1.5em;
+	transform: translatey(100px);
 	transition: all 0.5s;
 }
 
 div.slider div.slide.visible div.title p {
-	bottom: 0;
+	transform: translatey(0px);
 }
 
 div.slider div.form_wrap {
