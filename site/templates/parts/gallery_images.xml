@@ -9,6 +9,8 @@
 			alt="$params['title'][$language]"
 			cms:eval="src,alt"
 			/>
-		<span class="texture"><cms:var param="title" multilanguage="yes"/></span>
+		<cms:if condition="isset($template['title'])">
+			<span class="texture"><cms:var param="title" multilanguage="yes"/></span>
+		</cms:if>
 	</a>
 </document>

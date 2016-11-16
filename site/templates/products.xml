@@ -49,6 +49,7 @@
 					template="parts/gallery_images.xml"
 					>
 					<param name="thumbnail_size" value="250"/>
+					<param name="title" value=""/>
 				</cms:module>
 
 			</section>
