@@ -5,9 +5,10 @@
 		cms:eval="href"
 		>
 		<img
-			src="gallery::getThumbnailById($params['id'], null, 150,Thumbnail::CONSTRAIN_HEIGHT)"
+			src="gallery::getThumbnailById($params['id'], null, $template['thumbnail_size'], Thumbnail::CONSTRAIN_HEIGHT)"
 			alt="$params['title'][$language]"
 			cms:eval="src,alt"
 			/>
+		<span class="texture"><cms:var param="title" multilanguage="yes"/></span>
 	</a>
 </document>

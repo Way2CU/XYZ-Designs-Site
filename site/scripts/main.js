@@ -53,6 +53,7 @@ Site.on_load = function() {
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	Site.lightbox_clients = new LightBox('section.clients a.lightbox', false, false, true);
+	Site.home_page_gallery = new LightBox('section.gallery a.lightbox', false, false, true);
 
 	// create controls for home page sliders
 	var sliders = document.querySelectorAll('div.slide');

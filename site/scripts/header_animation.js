@@ -18,7 +18,7 @@ Site.Animation = function(element, element_stop) {
 	self.rgb = {r: 35, g: 31, b: 32};
 
 	self._init = function() {
-
+		// handle window scroll event
 		window.addEventListener('scroll', self.handle_scroll);
 	}
 
@@ -41,5 +41,13 @@ Site.Animation = function(element, element_stop) {
 }
 
 $(function() {
-	Site.animate_header = Site.Animation('header', 'div.slider');
+	var page = window.location.pathname;
+	switch (page) {
+		case "/":
+				Site.animate_header = Site.Animation('header', 'div.slider');
+			break;
+		case "/products":
+				Site.animate_header = Site.Animation('header', 'div.intro');
+			break;
+	}
 })
