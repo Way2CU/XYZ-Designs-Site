@@ -297,6 +297,35 @@ section article div.images img {
 	margin-right: auto;
 }
 
+section.clients a.lightbox {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 25px;
+	box-sizing: border-box;
+	border: 1px solid @color_bright_grey;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	top: 0;
+	transition: all 0.3s;
+}
+
+section.clients a.lightbox:hover {
+	box-shadow: 0px 0px 12px fade(@color_bright_grey, 50%);
+}
+
+section.clients a.lightbox:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+section.clients a.lightbox img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 ul#services {
 	display: block;
 	margin: 0;
@@ -317,7 +346,7 @@ ul#services li {
 }
 
 ul#services li:hover {
-	border-color: @color_bright_grey;
+	box-shadow: 0px 0px 12px fade(@color_bright_grey, 50%);
 }
 
 ul#services li svg {

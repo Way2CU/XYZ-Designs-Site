@@ -107,6 +107,38 @@
 				</cms:module>
 			</section>
 
+			<section class="gallery center">
+				<cms:module
+					name="gallery"
+					action="show_group"
+					text_id="home_page_gallery"
+					template="parts/gallery_group.xml"
+					/>
+
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="home_page_gallery"
+					template="parts/gallery_images.xml"
+					/>
+			</section>
+
+			<section class="clients center">
+				<cms:module
+					name="gallery"
+					action="show_group"
+					text_id="clients"
+					template="parts/gallery_group.xml"
+					/>
+
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="clients"
+					template="parts/gallery_images.xml"
+					/>
+			</section>
+
 			<!-- Bottom part of the site -->
 			<cms:template file="parts/footer.xml"/>
 		</body>
