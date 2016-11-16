@@ -238,6 +238,14 @@ section.features {
 	position: relative;
 }
 
+section.boards {
+	background-image: url(../images/boards.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 1920px 900px;
+	min-height: calc(~'900px - 4em');
+}
+
 section article h3,
 section > h2 {
 	margin: 0;
@@ -249,12 +257,44 @@ section > p {
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 1.2em;
+	line-height: 1.5em;
 	width: 70%;
 }
 
 section.features > p,
 section.features > h2 {
 	color: @color_white;
+}
+
+section article p {
+	font-size: 1.2em;
+}
+
+section article p:first-of-type {
+	margin-top: 0;
+}
+
+section.boards article {
+	display: inline-block;
+	width: 50%;
+}
+
+section.boards article h3 {
+	color: @color_dark_grey;
+}
+
+section article div.content,
+section article div.images {
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	width: 50%;
+}
+
+section article div.images img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 ul#services {
@@ -296,25 +336,17 @@ ul#services li:nth-of-type(2) {
 	margin: 0em 5%;
 }
 
-section article p:first-of-type {
-	margin-top: 0;
-}
-
-section article div.content,
-section article div.images {
-	display: inline-block;
-	vertical-align: middle;
-	box-sizing: border-box;
-	width: 50%;
-}
-
-section article div.images img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 // features
+
+section.features p.warranty {
+	position: absolute;
+	padding: 1em 2em;
+	bottom: 50px;
+	left: 50%;
+	width: 800px;
+	transform: translatex(-50%);
+	border: 1px solid @color_white;
+}
 
 ul#features {
 	position: absolute;
@@ -417,4 +449,5 @@ ul#features li.left:nth-of-type(5n):before {
 
 ul#features li h4 {
 	margin-bottom: 0.5em;
+	font-weight: 400;
 }

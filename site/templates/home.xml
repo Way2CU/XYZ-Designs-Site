@@ -91,6 +91,20 @@
 						<param name="title" value=""/>
 					</cms:module>
 				</ul>
+				<p class="warranty">
+					<cms:text constant="board_explanation"/>
+				</p>
+			</section>
+
+			<section class="boards">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="boards"
+					template="stock/article_generic.xml"
+					>
+					<param name="title" value=""/>
+				</cms:module>
 			</section>
 
 			<!-- Bottom part of the site -->

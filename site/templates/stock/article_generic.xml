@@ -1,4 +1,4 @@
-<!-- 
+<!--
   Generic article template has option to set article title, timestamp and author of the article.
   Template supports both desktop and mobile versions.
 
@@ -12,7 +12,7 @@
   <article class="isset($template['class']) ? $params['text_id'] : false" cms:optional="class">
     <!-- Title -->
     <cms:if condition="isset($template['title'])">
-      <h2><cms:var param="title" multilanguage="yes"/></h2>
+      <h3><cms:var param="title" multilanguage="yes"/></h3>
     </cms:if>
 
     <!-- Timestamp -->
