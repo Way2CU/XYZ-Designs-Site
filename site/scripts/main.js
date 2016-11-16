@@ -52,6 +52,8 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
+	Site.lightbox_clients = new LightBox('section.clients a.lightbox', false, false, true);
+
 	// create controls for home page sliders
 	var sliders = document.querySelectorAll('div.slide');
 	var controls_container = document.querySelector('div.controls');
@@ -67,6 +69,7 @@ Site.on_load = function() {
 		.setInterval(6000)
 		.attachControls('div.controls a')
 		.setWrapAround(true);
+
 };
 
 
