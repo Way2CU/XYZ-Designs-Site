@@ -15,6 +15,9 @@
 		</head>
 
 		<body>
+			<!-- floating form for dialog -->
+			<cms:template file="parts/floating_menu.xml"/>
+
 			<!-- Top section of the site -->
 			<cms:template file="parts/header.xml"/>
 
@@ -53,7 +56,6 @@
 				</cms:module>
 
 			</section>
-
 
 			<!-- Bottom part of the site -->
 			<cms:template file="parts/footer.xml"/>

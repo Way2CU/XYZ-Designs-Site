@@ -128,10 +128,19 @@ footer div.form_wrap h4 {
 	text-align: center;
 }
 
+div.floating_menu form,
 footer div.form_wrap form {
 	display: block;
 }
 
+div.floating_menu form {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2em 0em;
+}
+
+div.floating_menu form label,
 footer div.form_wrap form label {
 	display: block;
 	box-sizing: border-box;
@@ -141,16 +150,19 @@ footer div.form_wrap form label {
 	width: 100%;
 }
 
+div.floating_menu form label:hover,
 footer div.form_wrap form label:hover {
 	border-color: @color_blue;
 }
 
+div.floating_menu form label span,
 footer div.form_wrap form label span {
 	display: inline-block;
 	vertical-align: middle;
 	width: 50px;
 }
 
+div.floating_menu form label input,
 footer div.form_wrap form label input {
 	display: inline-block;
 	vertical-align: middle;
@@ -162,11 +174,17 @@ footer div.form_wrap form label input {
 	width: calc(~'100% - 50px');
 }
 
+div.floating_menu form label input {
+	color: @color_dark_grey;
+}
+
+div.floating_menu form div.controls,
 footer div.form_wrap form div.controls {
 	display: block;
 	text-align: center;
 }
 
+div.floating_menu form div.controls button,
 footer div.form_wrap form div.controls button {
 	display: inline-block;
 	padding: 0.7em 3em;
@@ -177,6 +195,7 @@ footer div.form_wrap form div.controls button {
 	cursor: pointer;
 }
 
+div.floating_menu form div.controls button:hover,
 footer div.form_wrap form div.controls button:hover {
 	background-color: lighten(@color_blue, 10%);
 }

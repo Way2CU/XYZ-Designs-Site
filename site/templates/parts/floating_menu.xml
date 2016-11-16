@@ -1,0 +1,9 @@
+<document>
+	<div class="floating_menu">
+		<cms:module
+			name="contact_form"
+			action="show"
+			text_id="contact"
+			/>
+	</div>
+</document>
