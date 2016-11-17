@@ -12,7 +12,9 @@
 
 		<body>
 			<!-- floating form for dialog -->
-			<cms:template file="parts/floating_menu.xml"/>
+			<cms:desktop>
+				<cms:template file="parts/floating_menu.xml"/>
+			</cms:desktop>
 
 			<!-- Top section of the site -->
 			<cms:template file="parts/header.xml"/>
@@ -39,6 +41,19 @@
 						<cms:text constant="button_contact"/>
 					</a>
 				</div>
+				<cms:desktop>
+					<div class="form_wrap">
+						<h4><cms:text constant="form_title"/></h4>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact"
+							/>
+					</div>
+				</cms:desktop>
+			</div>
+
+			<cms:mobile>
 				<div class="form_wrap">
 					<h4><cms:text constant="form_title"/></h4>
 					<cms:module
@@ -47,7 +62,7 @@
 						text_id="contact"
 						/>
 				</div>
-			</div>
+			</cms:mobile>
 
 			<section class="center texture">
 				<cms:module
