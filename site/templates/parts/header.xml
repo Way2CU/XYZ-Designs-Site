@@ -1,52 +1,119 @@
 <document>
 	<cms:svg file="site-sprite.svg"/>
-	<header>
-		<a
-			class="logo"
-			href="URL::make()"
-			cms:eval="href"
-			>
-		</a>
-
-		<nav>
+	<!-- Desktop header -->
+	<cms:desktop>
+		<header>
 			<a
-				class="URL::is_active('home.xml')"
+				class="logo"
 				href="URL::make()"
 				cms:eval="href"
-				cms:optional="class"
 				>
-				<cms:text constant="menu_home"/>
 			</a>
-			<a
-				class="URL::is_active('products.xml')"
-				href="URL::make(array(), 'products.xml')"
-				cms:eval="href"
-				cms:optional="class"
-				>
-				<cms:text constant="menu_products"/>
-			</a>
-			<a
-				class="URL::is_active('blog.xml')"
-				href="URL::make(array(), 'blog.xml')"
-				cms:eval="href"
-				cms:optional="class"
-				>
-				<cms:text constant="menu_blog"/>
-			</a>
-			<a
-				class="contact"
-				href="javascript:void(0)"
-				>
-				<cms:text constant="menu_contact"/>
-			</a>
-		</nav>
 
-		<a
-			href="'tel:'.urlencode(Language::get_Text('phone'))"
-			cms:eval="href"
-			class="phone"
-			>
-			<cms:text constant="phone"/>
-		</a>
-	</header>
+			<nav>
+				<a
+					class="URL::is_active('home.xml')"
+					href="URL::make()"
+					cms:eval="href"
+					cms:optional="class"
+					>
+					<cms:text constant="menu_home"/>
+				</a>
+				<a
+					class="URL::is_active('products.xml')"
+					href="URL::make(array(), 'products.xml')"
+					cms:eval="href"
+					cms:optional="class"
+					>
+					<cms:text constant="menu_products"/>
+				</a>
+				<a
+					class="URL::is_active('blog.xml')"
+					href="URL::make(array(), 'blog.xml')"
+					cms:eval="href"
+					cms:optional="class"
+					>
+					<cms:text constant="menu_blog"/>
+				</a>
+				<a
+					class="contact"
+					href="javascript:void(0)"
+					>
+					<cms:text constant="menu_contact"/>
+				</a>
+			</nav>
+
+			<a
+				href="'tel:'.urlencode(Language::get_Text('phone'))"
+				cms:eval="href"
+				class="phone"
+				>
+				<cms:text constant="phone"/>
+			</a>
+		</header>
+	</cms:desktop>
+	<!-- mobile header -->
+	<cms:mobile>
+		<header>
+			<div class="mobile_title">
+				<a
+					href="javascript:void"
+					class="menu"
+					>
+					<cms:svg file="site-sprite.svg" symbol="menu"/>
+				</a>
+				<a
+					class="logo"
+					href="URL::make()"
+					cms:eval="href"
+					>
+					<img
+						src="_BASEURL.'/site/images/logo.svg'"
+						alt="site_title"
+						cms:constant="alt"
+						cms:eval="src"
+						/>
+				</a>
+				<a
+					href="'tel:'.urlencode(Language::get_Text('phone'))"
+					cms:eval="href"
+					class="phone"
+					>
+					<cms:svg file="site-sprite.svg" symbol="phone"/>
+				</a>
+			</div>
+			<nav class="mobile_menu">
+				<a
+					class="URL::is_active('home.xml')"
+					href="URL::make()"
+					cms:eval="href"
+					cms:optional="class"
+					>
+					<cms:text constant="menu_home"/>
+				</a>
+				<a
+					class="URL::is_active('products.xml')"
+					href="URL::make(array(), 'products.xml')"
+					cms:eval="href"
+					cms:optional="class"
+					>
+					<cms:text constant="menu_products"/>
+				</a>
+				<a
+					class="URL::is_active('blog.xml')"
+					href="URL::make(array(), 'blog.xml')"
+					cms:eval="href"
+					cms:optional="class"
+					>
+					<cms:text constant="menu_blog"/>
+				</a>
+				<a
+					class="contact"
+					href="javascript:void(0)"
+					>
+					<cms:text constant="menu_contact"/>
+				</a>
+			</nav>
+		</header>
+	</cms:mobile>
 </document>

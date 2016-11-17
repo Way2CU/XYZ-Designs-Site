@@ -1,0 +1,63 @@
+/**
+ * Header mobile Style Sheet
+ * XYZ Designs
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+div.mobile_title {
+	text-align: center;
+	background-color: @color_dark_grey;
+}
+
+div.mobile_title a.logo {
+	display: inline-block;
+	padding: 0.3em 0em;
+	width: 150px;
+}
+
+div.mobile_title a.logo img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+div.mobile_title a.phone,
+div.mobile_title a.menu {
+	position: absolute;
+	padding: 0.5em;
+	top: 50%;
+	left: 0em;
+	transform: translatey(-50%);
+}
+
+div.mobile_title a.menu {
+	left: auto;
+	right: 0em;
+}
+
+div.mobile_title a.phone svg,
+div.mobile_title a.menu svg {
+	width: 2em;
+	height: 2em;
+	fill: @color_white;
+}
+
+html[dir=rtl] .mobile_menu {
+	top: 57px !important;
+	right: -100%;
+	overflow-y: scroll;
+	background-color: @color_dark_grey;
+}
+
+html[dir=rtl] .mobile_menu.visible {
+	width: 100%;
+	right: 0%;
+}
+
+.mobile_menu a {
+	padding: 1.2em;
+	color: @color_white;
+	border-bottom: 1px solid @color_white;
+}
