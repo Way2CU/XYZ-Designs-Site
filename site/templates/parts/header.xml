@@ -109,7 +109,7 @@
 				</a>
 				<a
 					class="contact"
-					href="javascript:void(0)"
+					href="#form"
 					>
 					<cms:text constant="menu_contact"/>
 				</a>

@@ -36,10 +36,11 @@
 						>
 						<cms:text constant="button_products"/>
 					</a>
-
-					<a href="javascript:void(0)" class="contact">
-						<cms:text constant="button_contact"/>
-					</a>
+					<cms:desktop>
+						<a href="javascript:void(0)" class="contact">
+							<cms:text constant="button_contact"/>
+						</a>
+					</cms:desktop>
 				</div>
 				<cms:desktop>
 					<div class="form_wrap">
@@ -54,7 +55,7 @@
 			</div>
 
 			<cms:mobile>
-				<div class="form_wrap">
+				<div id="form" class="form_wrap">
 					<h4><cms:text constant="form_title"/></h4>
 					<cms:module
 						name="contact_form"

@@ -56,6 +56,7 @@ div.slider div.links {
 	left: 50%;
 	transform: translatex(-50%);
 	width: 300px;
+	text-align: center;
 }
 
 div.slider div.links a {
@@ -202,6 +203,32 @@ div.form_wrap form div.controls button:hover {
 	background-color: lighten(@color_blue, 10%);
 }
 
+div.intro {
+	background-image: url(../images/header_products.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+	height: calc(100vw * @header_images_ratio);
+	position: relative;
+	text-align: center;
+}
+
+div.intro:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+div.intro h1 {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	color: @color_white;
+	font-weight: 400;
+	font-size: 1.5em;
+}
+
 section {
 	padding: 1em 0.5em;
 }
@@ -235,6 +262,10 @@ section > h2 {
 
 section > h2 {
 	font-size: 1.5em;
+}
+
+section article h3 {
+	font-size: 1.2em;
 }
 
 section > p {
