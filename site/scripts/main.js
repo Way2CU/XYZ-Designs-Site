@@ -52,22 +52,32 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
-	Site.lightbox_clients = new LightBox('section.clients a.lightbox', false, false, true);
-	Site.home_page_gallery = new LightBox('section.gallery a.lightbox', false, false, true);
+	if (!Site.is_mobile()) {
+		Site.lightbox_clients = new LightBox('section.clients a.lightbox', false, false, true);
+		Site.home_page_gallery = new LightBox('section.gallery a.lightbox', false, false, true);
 
-	// create dialog for showing contact form
-	Site.floating_form = new Dialog();
-	Site.floating_form
-		.setContentFromDOM('div.floating_menu')
-		.setSize(600, 300)
-		.setTitle(language_handler.getText(null, 'form_title'));
+		// create dialog for showing contact form
+		Site.floating_form = new Dialog();
+		Site.floating_form
+			.setContentFromDOM('div.floating_menu')
+			.setSize(600, 300)
+			.setTitle(language_handler.getText(null, 'form_title'));
 
-	// create handler for submitting dialog form
-	Caracal.ContactForm.list[0].events.connect('submit-success', function(event) {
-		Site.floating_form.hide();
-		return true;
-	});
+		// create handler for submitting dialog form
+		Caracal.ContactForm.list[0].events.connect('submit-success', function(event) {
+			Site.floating_form.hide();
+			return true;
+		});
 
+		// click handle for showing dialog
+		var button_dialog = document.querySelectorAll('a.contact');
+
+		for(var i = 0; i < button_dialog.length; i++) {
+			button_dialog[i].addEventListener('click', function() {
+				Site.floating_form.show();
+			})
+		}
+	}
 
 	// create controls for home page sliders
 	var sliders = document.querySelectorAll('div.slide');
@@ -84,15 +94,6 @@ Site.on_load = function() {
 		.setInterval(6000)
 		.attachControls('div.controls a')
 		.setWrapAround(true);
-
-	// click handle for showing dialog
-	var button_dialog = document.querySelectorAll('a.contact');
-
-	for(var i = 0; i < button_dialog.length; i++) {
-		button_dialog[i].addEventListener('click', function() {
-			Site.floating_form.show();
-		})
-	}
 };
 
 
