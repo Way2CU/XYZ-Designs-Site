@@ -1,0 +1,196 @@
+/**
+ * Footer mobile Style Sheet
+ * XYZ Desgins
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+footer {
+	display: block;
+	text-align: center;
+	position: relative;
+	background-color: @color_dark_grey;
+	white-space: nowrap;
+}
+
+footer div.content {
+	padding-top: 1em;
+	text-align: center;
+	background-image: url(../images/mobile-footer.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+}
+
+footer div.content > div {
+	display: block;
+	box-sizing: border-box;
+	color: @color_white;
+}
+
+footer div.content > div.address {
+	padding: 0em 2em;
+}
+
+footer div.content > div.address a {
+	display: block;
+	text-align: right;
+	padding-right: 60px;
+	margin-bottom: 2em;
+	text-decoration: none;
+	color: @color_white;
+	position: relative;
+}
+
+footer div.content > div.address a:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translatey(-50%);
+
+	background-image: url(../images/icon-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 420px 60px;
+	width: 60px;
+	height: 60px;
+}
+
+footer div.content > div.address a.phone:before {
+	background-position: 0px 0px;
+}
+
+footer div.content > div.address a.waze:before {
+	background-position: -120px 0px;
+}
+
+footer div.content > div.address a.mail:before {
+	background-position: -60px 0px;
+}
+
+footer div.content > div.address a p {
+	margin: 0;
+}
+
+footer div.content > div.social {
+	text-align: center;
+	padding: 0em 1.5em;
+	white-space: normal;
+}
+
+footer div.content > div.social h4 {
+	margin-top: 0;
+}
+
+footer div.content > div.social a {
+	display: inline-block;
+	margin: 0em 0.5em;
+	background-image: url(../images/icon-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 560px 80px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	background-color: transparent;
+	transition: all 0.3s;
+}
+
+footer div.content > div.social a:hover {
+	border-color: @color_blue;
+	background-color: fade(@color_white, 50%);
+}
+
+footer div.content > div.social a.facebook {
+	background-position: -240px 0px;
+}
+
+footer div.content > div.social a.linkedin {
+	background-position: -320px 0px;
+}
+
+footer div.content > div.social a.pinterest {
+	background-position: -400px 0px;
+}
+
+footer div.content > div.social a.youtube {
+	background-position: -160px 0px;
+}
+
+footer div.content > div.social a.instagram {
+	background-position: -480px 0px;
+}
+
+footer div.form_wrap {
+	background-color: transparent;
+}
+
+footer div.form_wrap h4 {
+	margin-top: 0;
+	text-align: center;
+}
+
+footer div.form_wrap form {
+	display: block;
+}
+
+footer div.form_wrap form label {
+	display: block;
+	box-sizing: border-box;
+	margin-bottom: 1.5em;
+	border-bottom: 1px solid @color_bright_grey;
+	transition: all 0.3s;
+	width: 100%;
+}
+
+footer div.form_wrap form label:hover {
+	border-color: @color_blue;
+}
+
+footer div.form_wrap form label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50px;
+}
+
+footer div.form_wrap form label input {
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	padding: 0.7em 0.2em;
+	border: none;
+	color: @color_text;
+	background-color: transparent;
+	width: calc(~'100% - 50px');
+}
+
+footer div.form_wrap form div.controls {
+	display: block;
+	text-align: center;
+}
+
+footer div.form_wrap form div.controls button {
+	display: inline-block;
+	padding: 0.7em 3em;
+	border: 1px solid #bdc3c7;
+	background-color: #1e477a;
+	color: #ffffff;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+
+/**
+ * Copyright
+ */
+
+footer div.copyright {
+	display: inline-block;
+	color: @color_white;
+}
+
+footer div.copyright a {
+	color: @color_white;
+}
