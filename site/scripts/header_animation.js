@@ -44,8 +44,9 @@ $(function() {
 	var page = window.location.pathname;
 	switch (page) {
 		case "/":
-				Site.animate_header = Site.Animation('header', 'div.slider');
+			Site.animate_header = Site.Animation('header', 'div.slider');
 			break;
+
 		case "/products":
 				Site.animate_header = Site.Animation('header', 'div.intro');
 			break;
