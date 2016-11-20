@@ -157,7 +157,7 @@
 					name="gallery"
 					action="show_image_list"
 					group="clients"
-					template="parts/gallery_images.xml"
+					template="parts/client_images.xml"
 					>
 					<param name="thumbnail_size" value="150"/>
 				</cms:module>
