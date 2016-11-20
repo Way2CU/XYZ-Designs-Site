@@ -79,7 +79,7 @@
 						group="services"
 						template="stock/features_generic.xml"
 						>
-						<param name="sprite" value="site-sprite"/>
+						<param name="sprite" value="site-sprite.svg"/>
 						<param name="title" value=""/>
 					</cms:module>
 				</ul>

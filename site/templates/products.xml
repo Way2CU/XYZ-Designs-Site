@@ -41,7 +41,7 @@
 						group="product_features"
 						template="stock/features_generic.xml"
 						>
-						<param name="sprite" value="site-sprite"/>
+						<param name="sprite" value="site-sprite.svg"/>
 					</cms:module>
 				</ul>
 			</section>
