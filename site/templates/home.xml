@@ -55,7 +55,7 @@
 			</div>
 
 			<cms:mobile>
-				<div id="form" class="form_wrap">
+				<div class="form_wrap">
 					<h4><cms:text constant="form_title"/></h4>
 					<cms:module
 						name="contact_form"
