@@ -4,7 +4,11 @@
 	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
-			<title><cms:text constant="site_title"/></title>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="menu_blog"/>
+			</title>
 			<cms:collection include="page_control,animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
@@ -12,6 +16,10 @@
 		<body>
 			<!-- Top section of the site -->
 			<cms:template file="parts/header.xml"/>
+
+			<div class="intro">
+				<h1><cms:text constant="blog_message"/></h1>
+			</div>
 
 			<!-- Bottom part of the site -->
 			<cms:template file="parts/footer.xml"/>
