@@ -8,6 +8,7 @@
 				href="URL::make()"
 				cms:eval="href"
 				>
+				<cms:svg file="logo.svg"/>
 			</a>
 
 			<nav>
@@ -67,12 +68,7 @@
 					href="URL::make()"
 					cms:eval="href"
 					>
-					<img
-						src="_BASEURL.'/site/images/logo.svg'"
-						alt="site_title"
-						cms:constant="alt"
-						cms:eval="src"
-						/>
+					<cms:svg file="logo.svg"/>
 				</a>
 				<a
 					href="'tel:'.urlencode(Language::get_Text('phone'))"

@@ -21,13 +21,18 @@ header {
 }
 
 header a.logo {
-	display: inline-block;
-	vertical-align: middle;
-	padding: 2em 9em;
-	background-image: url(../images/logo.svg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: auto 100%;
+	position: absolute;
+	padding: 1em;
+	top: 50%;
+	right: calc(~'50% - 600px');
+	transform: translatey(-50%);
+}
+
+header a.logo svg {
+	display: block;
+	width: 6em;
+	height: calc(~'6em *' (80 / 112));
+	fill: @color_white;
 }
 
 header nav {
