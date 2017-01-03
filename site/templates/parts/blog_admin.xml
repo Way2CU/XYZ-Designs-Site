@@ -1,0 +1,28 @@
+<document>
+	<article
+		>
+		<img
+			src="gallery::getGroupThumbnailById($params['gallery'], null, 400, Thumbnail::CONSTRAIN_HEIGHT);"
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+			/>
+
+		<img
+			class="portfolio"
+			src="gallery::getThumbnailById(null, 'portfolio', 200, Thumbnail::CONSTRAIN_HEIGHT);"
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+			/>
+
+		<h2><cms:var param="title" multilanguage="yes"/></h2>
+		<cms:markdown param="content" multilanguage="yes"/>
+
+		<a
+			href="facebook_address"
+			class="facebook"
+			cms:constant="href"
+			>
+			<cms:svg file="site-sprite.svg" symbol="phone"/>
+		</a>
+	</article>
+</document>

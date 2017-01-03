@@ -50,5 +50,8 @@ $(function() {
 		case "/products":
 				Site.animate_header = Site.Animation('header', 'div.intro');
 			break;
+
+		case "/blog":
+			Site.animate_header = Site.Animation('header', 'div.intro');
 	}
 })

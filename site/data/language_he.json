@@ -5,7 +5,7 @@
 	"menu_products": "המוצרים שלנו",
 	"menu_blog":"בלוג",
 	"menu_contact":"יצירת קשר",
-	"blog_message": "הבלוג מגיע בקרוב",
+	"blog_message": "הבלוג שלנו",
 	"button_contact": "צרו עימנו קשר",
 	"button_products": "תיק עבודות",
 	"form_title": "רוצים שנחזור אליכם? מלאו את הטופס",
@@ -15,5 +15,7 @@
 	"board_explanation": "הלוח חזק במיוחד ויחד עם זאת גמיש וניתן לכיפוף, עיגול ומעקב אחר קימורים, מאפשרים לו להיות כחומר ביד היוצר עבור אדריכלים ואנשי מקצוע בתחום.",
 	"copyright_holder": "Copyright &copy; 2016. by <a href=\"http://way2cu.com\" target=\"_blank\">Way2CU</a>.",
 	"copyright_text": "All rights reserved.",
-	"message_sent": "הטופס נשלח בהצלחה, ניצור עמכם קשר בהקדם."
+	"message_sent": "הטופס נשלח בהצלחה, ניצור עמכם קשר בהקדם.",
+	"label_read_more": "המשך קריאה",
+	"facebook_address": "https://www.facebook.com/rotem.goldblatt"
 }
