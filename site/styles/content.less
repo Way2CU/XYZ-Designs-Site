@@ -557,6 +557,7 @@ ul#features li h4 {
  */
 section.blog {
 	padding: 50px calc(~'(100% - 1200px)' / 2);
+	position: relative;
 }
 
 section div.blogs,
@@ -664,12 +665,13 @@ section div.blog_admin article h2 {
 
 section div.blog_admin article a.facebook {
 	display: inline-block;
-}
-
-section div.blog_admin article a.facebook svg {
-	display: block;
-	width: 2.5em;
-	height: 2.5em;
+	background-image: url(../images/icon-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: -240px 0px;
+	background-size: 560px 80px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
 }
 
 section div.blog_admin div.newsletter {

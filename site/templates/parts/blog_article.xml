@@ -1,0 +1,27 @@
+<document>
+	<article>
+		<!-- Show article group image -->
+		<figure>
+			<img
+				src="gallery::getGroupThumbnailById($params['gallery'], null, 700);"
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+			/>
+		</figure>
+
+		<div>
+			<h3><cms:var param="title" multilanguage="yes"/></h3>
+			<cms:markdown param="content" multilanguage="yes"/>
+
+			<a
+				class="more"
+				href="URL::make(array(), 'blog.xml')"
+				cms:eval="href"
+				>
+				<cms:text constant="label_back"/>
+			</a>
+
+			<span class="timestamp"><cms:var param="timestamp"/></span>
+		</div>
+	</article>
+</document>

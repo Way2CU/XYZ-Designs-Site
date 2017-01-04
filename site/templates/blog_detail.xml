@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<document type="html5">
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="$_REQUEST['name']"
+					template="parts/article_page_title.xml"
+					cms:eval="text_id"
+					/>
+			</title>
+			<cms:collection include="page_control,animation_chain"/>
+			<cms:script src="_BASEURL.'/site/scripts/header_animation.js'" cms:eval="src"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<!-- Top section of the site -->
+			<cms:template file="parts/header.xml"/>
+
+			<div class="intro blog">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="$_REQUEST['name']"
+					template="parts/article_title.xml"
+					cms:eval="text_id"
+				/>
+			</div>
+
+			<section class="blog">
+				<div class="blogs">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="$_REQUEST['name']"
+						template="parts/blog_article.xml"
+						cms:eval="text_id"
+					/>
+				</div>
+
+				<div class="blog_admin">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="rotem"
+						template="parts/blog_admin.xml"
+						/>
+					<div class="newsletter">
+						<cms:module
+							name="articles"
+							action="show"
+							text_id="newsletter"
+							template="stock/article_generic.xml"
+							>
+							<param name="title" value=""/>
+						</cms:module>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="newsletter"
+							/>
+					</div>
+				</div>
+			</section>
+
+			<!-- Bottom part of the site -->
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>
