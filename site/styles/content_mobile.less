@@ -221,6 +221,16 @@ div.intro:before {
 	height: 100%;
 }
 
+
+div.blog {
+	background-image: url(../images/mobile-blog.jpg);
+	height: calc(~'100vw *' (600 / 1211) );
+}
+
+div.blog:before {
+	content: none;
+}
+
 div.intro h1 {
 	display: inline-block;
 	vertical-align: middle;
@@ -228,6 +238,10 @@ div.intro h1 {
 	color: @color_white;
 	font-weight: 400;
 	font-size: 1.5em;
+}
+
+div.blog h1 {
+	padding-top: 1em;
 }
 
 section {
@@ -445,4 +459,167 @@ ul#features li {
 ul#features li h4 {
 	margin: 0;
 	font-weight: 400;
+}
+
+/*
+ * Blog mobile
+ */
+
+section.blog {
+	position: relative;
+}
+
+section div.blogs,
+section div.blog_admin {
+	display: block;
+	box-sizing: border-box;
+	padding: 0em 1em;
+}
+
+section div.blogs > article {
+	margin-bottom: 1em;
+	box-sizing: border-box;
+	overflow: hidden;
+	background-color: lighten(@color_bright_grey, 22%);
+}
+
+section div.blogs > article:last-of-type {
+	margin-bottom: 0;
+}
+
+section div.blogs figure {
+	display: block;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+section div.blogs figure img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section div.blogs article > div {
+	padding: 0.5em 0.5em;
+	position: relative;
+}
+
+section div.blogs article a.more {
+	display: inline-block;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	border: 1px solid @color_blue;
+	background-color: @color_blue;
+	color: @color_white;
+	font-weight: 700;
+	transition: all 0.3s;
+}
+
+section div.blogs article span.timestamp {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+}
+
+section div.blog_admin {
+	text-align: center;
+	overflow: hidden;
+	margin-bottom: 1em;
+	margin-top: -6em;
+}
+
+section.blog_mobile div.blog_admin {
+	margin-top: 0em;
+}
+
+section div.blog_admin > article {
+	padding-bottom: 0.5em;
+}
+
+section div.blog_admin article img.portfolio {
+	border-radius: 50%;
+	padding: 0.5em;
+	background-color: lighten(@color_bright_grey, 22%);
+}
+
+section div.blog_admin article h2 {
+	margin: 0;
+	padding: 0.2em 0em;
+	color: @color_bright_blue;
+}
+
+section div.blog_admin article a.facebook {
+	display: inline-block;
+	background-image: url(../images/icon-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: -240px 0px;
+	background-size: 560px 80px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+section div.blog_admin div.newsletter {
+	padding: 0.5em 2em;
+	background-color: lighten(@color_bright_grey, 22%);
+}
+
+section div.blog_admin div.newsletter h3 {
+	padding: 0.5em 0em;
+	border-bottom: 2px dotted @color_bright_blue;
+}
+
+section div.blog_admin div.newsletter p {
+	margin-top: 1em;
+}
+
+section div.blog_admin div.newsletter form {
+	display: block;
+	text-align: right;
+}
+
+section div.blog_admin div.newsletter form label {
+	display: block;
+	width: 100%;
+}
+
+section div.blog_admin div.newsletter form label span {
+	display: block;
+}
+
+section div.blog_admin div.newsletter form label input {
+	display: block;
+	box-sizing: border-box;
+	padding: 0.7em 0.2em;
+	width: 100%;
+	border: 1px solid @color_bright_grey;
+	transition: all 0.3s;
+}
+
+section div.blog_admin div.newsletter form label input:focus,
+section div.blog_admin div.newsletter form label input:hover {
+	border-color: @color_blue
+}
+
+section div.blog_admin div.newsletter form div.controls {
+	display: block;
+	margin-top: 0.5em;
+	text-align: center;
+}
+
+section div.blog_admin div.newsletter form div.controls button {
+	display: inline-block;
+	padding: 0.5em 1.5em;
+	border: 1px solid @color_blue;
+	background-color: @color_blue;
+	color: @color_white;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+section div.blog_admin div.newsletter form div.controls button:hover {
+	background-color: @color_blue;
+	color: @color_white;
 }

@@ -3,7 +3,7 @@
 		<!-- Show article group image -->
 		<figure>
 			<img
-				src="gallery::getGroupThumbnailById($params['gallery'], null, 700);"
+				src="gallery::getGroupThumbnailById($params['gallery'], null, _DESKTOP_VERSION ? 700 : 300);"
 				alt="$params['title'][$language]"
 				cms:eval="src,alt"
 			/>

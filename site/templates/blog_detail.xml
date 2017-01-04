@@ -15,6 +15,13 @@
 					cms:eval="text_id"
 					/>
 			</title>
+			<!-- Page description -->
+			<cms:module
+				name="page_info"
+				action="set_description"
+				article="$_REQUEST['name']"
+				cms:eval="article"
+			/>
 			<cms:collection include="page_control,animation_chain"/>
 			<cms:script src="_BASEURL.'/site/scripts/header_animation.js'" cms:eval="src"/>
 			<cms:module name="head_tag" action="print_tag"/>
@@ -23,18 +30,22 @@
 		<body>
 			<!-- Top section of the site -->
 			<cms:template file="parts/header.xml"/>
+			<cms:desktop>
+				<div class="intro blog">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="$_REQUEST['name']"
+						template="parts/article_title.xml"
+						cms:eval="text_id"
+					/>
+				</div>
+			</cms:desktop>
 
-			<div class="intro blog">
-				<cms:module
-					name="articles"
-					action="show"
-					text_id="$_REQUEST['name']"
-					template="parts/article_title.xml"
-					cms:eval="text_id"
-				/>
-			</div>
-
-			<section class="blog">
+			<section
+				class="_DESKTOP_VERSION ? 'blog' : 'blog_mobile'"
+				cms:eval="class"
+				>
 				<div class="blogs">
 					<cms:module
 						name="articles"

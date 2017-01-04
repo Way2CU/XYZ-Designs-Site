@@ -1,11 +1,13 @@
 <document>
 	<article
 		>
-		<img
-			src="gallery::getGroupThumbnailById($params['gallery'], null, 400, Thumbnail::CONSTRAIN_HEIGHT);"
-			alt="$params['title'][$language]"
-			cms:eval="src,alt"
-			/>
+		<cms:desktop>
+			<img
+				src="gallery::getGroupThumbnailById($params['gallery'], null, 400, Thumbnail::CONSTRAIN_HEIGHT);"
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+				/>
+		</cms:desktop>
 
 		<img
 			class="portfolio"
@@ -18,6 +20,7 @@
 		<cms:markdown param="content" multilanguage="yes"/>
 
 		<a
+			target="_blank"
 			href="facebook_address"
 			class="facebook"
 			cms:constant="href"

@@ -41,18 +41,20 @@ Site.Animation = function(element, element_stop) {
 }
 
 $(function() {
-	var page = window.location.pathname;
-	switch (page) {
-		case "/":
-			Site.animate_header = Site.Animation('header', 'div.slider');
-			break;
+	if(!Site.is_mobile()) {
+		var page = window.location.pathname;
+		switch (page) {
+			case "/":
+				Site.animate_header = Site.Animation('header', 'div.slider');
+				break;
 
-		case "/products":
-				Site.animate_header = Site.Animation('header', 'div.intro');
-			break;
-	}
+			case "/products":
+					Site.animate_header = Site.Animation('header', 'div.intro');
+				break;
+		}
 
-	if(page.match('/blog')) {
-		Site.animate_header = Site.Animation('header', 'div.intro');
+		if(page.match('/blog')) {
+			Site.animate_header = Site.Animation('header', 'div.intro');
+		}
 	}
 })

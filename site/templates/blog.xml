@@ -23,40 +23,78 @@
 			</div>
 
 			<section class="blog">
-				<div class="blogs">
-					<cms:module
-						name="articles"
-						action="show_list"
-						group="blogs"
-						order_by="id"
-						order_asc="0"
-						template="parts/blog_list.xml"
-					/>
-				</div>
-
-				<div class="blog_admin">
-					<cms:module
-						name="articles"
-						action="show"
-						text_id="rotem"
-						template="parts/blog_admin.xml"
+				<cms:desktop>
+					<div class="blogs">
+						<cms:module
+							name="articles"
+							action="show_list"
+							group="blogs"
+							order_by="id"
+							order_asc="0"
+							template="parts/blog_list.xml"
 						/>
-					<div class="newsletter">
+					</div>
+
+					<div class="blog_admin">
 						<cms:module
 							name="articles"
 							action="show"
-							text_id="newsletter"
-							template="stock/article_generic.xml"
-							>
-							<param name="title" value=""/>
-						</cms:module>
-						<cms:module
-							name="contact_form"
-							action="show"
-							text_id="newsletter"
+							text_id="rotem"
+							template="parts/blog_admin.xml"
 							/>
+						<div class="newsletter">
+							<cms:module
+								name="articles"
+								action="show"
+								text_id="newsletter"
+								template="stock/article_generic.xml"
+								>
+								<param name="title" value=""/>
+							</cms:module>
+							<cms:module
+								name="contact_form"
+								action="show"
+								text_id="newsletter"
+								/>
+						</div>
 					</div>
-				</div>
+				</cms:desktop>
+
+				<cms:mobile>
+					<div class="blog_admin">
+						<cms:module
+							name="articles"
+							action="show"
+							text_id="rotem"
+							template="parts/blog_admin.xml"
+							/>
+						<div class="newsletter">
+							<cms:module
+								name="articles"
+								action="show"
+								text_id="newsletter"
+								template="stock/article_generic.xml"
+								>
+								<param name="title" value=""/>
+							</cms:module>
+							<cms:module
+								name="contact_form"
+								action="show"
+								text_id="newsletter"
+								/>
+						</div>
+					</div>
+					<div class="blogs">
+						<cms:module
+							name="articles"
+							action="show_list"
+							group="blogs"
+							order_by="id"
+							order_asc="0"
+							template="parts/blog_list.xml"
+						/>
+					</div>
+				</cms:mobile>
 			</section>
 
 			<!-- Bottom part of the site -->
