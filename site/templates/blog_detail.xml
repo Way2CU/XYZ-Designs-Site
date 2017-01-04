@@ -17,8 +17,7 @@
 			</title>
 			<!-- Page description -->
 			<cms:module
-				name="page_info"
-				action="set_description"
+				name="page_description"
 				article="$_REQUEST['name']"
 				cms:eval="article"
 			/>
