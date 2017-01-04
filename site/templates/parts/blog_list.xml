@@ -21,7 +21,7 @@
 				<cms:text constant="label_read_more"/>
 			</a>
 
-			<span class="timestamp"><cms:var param="timestamp"/></span>
+			<span class="timestamp"><cms:var param="date"/></span>
 		</div>
 	</article>
 </document>
