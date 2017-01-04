@@ -15,6 +15,11 @@
 		</head>
 
 		<body>
+			<!-- floating form for dialog -->
+			<cms:desktop>
+				<cms:template file="parts/floating_menu.xml"/>
+			</cms:desktop>
+
 			<!-- Top section of the site -->
 			<cms:template file="parts/header.xml"/>
 
