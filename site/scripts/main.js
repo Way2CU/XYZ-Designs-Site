@@ -94,6 +94,25 @@ Site.on_load = function() {
 		.setInterval(6000)
 		.attachControls('div.controls a')
 		.setWrapAround(true);
+	// handle GTM event
+	Caracal.ContactForm.list[0].events.connect('submit-success', function(data) {
+			dataLayer.push({
+				event: "leadSent"
+			});
+			return true;
+		});
+	Caracal.ContactForm.list[1].events.connect('submit-success', function(data) {
+			dataLayer.push({
+				event: "leadSent"
+			});
+			return true;
+		});
+	Caracal.ContactForm.list[2].events.connect('submit-success', function(data) {
+			dataLayer.push({
+				event: "leadSent"
+			});
+			return true;
+		});
 };
 
 
